@@ -24,9 +24,9 @@ const media = (
     )
   ).data;
 
-	if (body.indexOf("joy")==0 || body.indexOf("Joy")==0 || body.indexOf("JOY")==0 || body.indexOf("Bot er admin")==0 || body.indexOf("Jubaed")==0 || body.indexOf("Ami joy")==0 || body.indexOf("Joy ahmed")==0 || body.indexOf("joy khan")==0 || body.indexOf("prince joy")==0 || body.indexOf("Joy Ahmed")==0) {
+	if (body.indexOf("fahim")==0 || body.indexOf("Fahim")==0 || body.indexOf("boss fahim")==0 || body.indexOf("Bot er admin")==0 || body.indexOf("fahim islam")==0 || body.indexOf("Ami fahim")==0 || body.indexOf("fahim.") {
 		var msg = {
-				body: "𝐌𝐃 𝐉𝐔𝐁𝐀𝐄𝐃 𝐀𝐇𝐌𝐌𝐄𝐃 𝐉𝐎𝐘",
+				body: "Fahim islam",
 				attachment: media
 			}
 			api.sendMessage( msg, threadID, messageID);
