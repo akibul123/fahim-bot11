@@ -6,15 +6,15 @@
   "language": "en",
   "notification": true,
   "approval": false,
-  "BOTNAME": "JOY-BOT",
+  "BOTNAME": "mim ar jamai fahim ar bot 🥰",
   "PREFIX": "/",
   "OPERATOR": [
-    "100065050393649",
-    "100005938666995"
+    "100046430705172",
+    ""
   ],
   "ADMINBOT": [
-    "100065050393649",
-    "100005938666995"
+    "100046430705172",
+    ""
   ],
   "OWNER": ["100000959749712"], 
   "APPROVED": [],
