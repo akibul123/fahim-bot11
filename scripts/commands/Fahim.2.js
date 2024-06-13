@@ -13,7 +13,7 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("bot er malik ke")==0 || (event.body.indexOf("kar bot")==0 || (event.body.indexOf("bot tor boss ke")==0 || (event.body.indexOf("I love you")==0)))) {
+	if (event.body.indexOf("Bot er malik ke")==0 || (event.body.indexOf("Bot kar")==0 || (event.body.indexOf("Bot tor boss ke")==0 || (event.body.indexOf("I love you")==0)))) {
 		var msg = {
 				body: " আমার বস ফাহিম ইসলাম কিছু বলে আমার বসের ইনবক্সে এ জা Facebook ling : https://www.facebook.com/profile.php?id=100046430705172:))"
     }
