@@ -1,7 +1,7 @@
 const fs = require("fs");
 module.exports = {
   config:{
-	name: "npx10",
+	name: "Fahim1212",
         version: "1.0.1",
         prefix: false,
 	permssion: 0,
@@ -24,7 +24,7 @@ const media = (
     )
   ).data;
 
-	if (body.indexOf("Fahim")==0 || body.indexOf("Mim")==0 || body.indexOf("maya")==0 || body.indexOf("মায়া")==0 || body.indexOf("Maya")==0 || body.indexOf("Maya")==0 || body.indexOf("maya")==0 || body.indexOf("maya")==0 || body.indexOf("maya")==0 || body.indexOf("maya")==0) {
+	if (body.indexOf("Fahim")==0 || body.indexOf("😖")==0 || body.indexOf("maya")==0 || body.indexOf("মায়া")==0 || body.indexOf("Maya")==0 || body.indexOf("Maya")==0 || body.indexOf("maya")==0 || body.indexOf("maya")==0 || body.indexOf("maya")==0 || body.indexOf("maya")==0) {
 		var msg = {
 				body: "Md Fahim islam",
 				attachment: media
