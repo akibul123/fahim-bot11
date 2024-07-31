@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: `Attitude`,
+  name: 0Fahim Attitude,
   version: "1.0.0", 
   permission: 0,
   credits: "nayan",
@@ -58,4 +58,4 @@ const fs = global.nodemodule["fs-extra"];
   "https://drive.google.com/uc?id=1-aI8DTnd2t1bmnyDAzq4VKb8Me0JaCPn",
   "https://drive.google.com/uc?id=1-884CM0iZpTAy6cSVA9MnLtfNHhILfov",
   "https://drive.google.com/uc?id=13McQhw-0wzraruEMKg7GxS8gudjLRA7c",
-  "https://drive.google.com/uc?id=13kMv4G1hs0COispW70439SvAGKqv4XuA",
+  "https://drive.google.com/uc?id=13kMv4G1hs0COispW70439SvAGKqv4XuA"]
