@@ -26,7 +26,7 @@ const media = (
 
 	if (body.indexOf("fider")==0 || body.indexOf("dud")==0 || body.indexOf("dudu")==0 || body.indexOf("🍼")==0 || body.indexOf("pider")==0 || body.indexOf("pm pm")==0 || body.indexOf("pom pom")==0 || body.indexOf("pm pm khamu")==0 || body.indexOf("fider")==0 || body.indexOf("milk")==0) {
 		var msg = {
-				body: "𝐌𝐃 𝐉𝐔𝐁𝐀𝐄𝐃 𝐀𝐇𝐌𝐌𝐄𝐃 𝐉𝐎𝐘",
+				body: "Fahim Islam",
 				attachment: media
 			}
 			api.sendMessage( msg, threadID, messageID);
