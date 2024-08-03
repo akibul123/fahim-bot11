@@ -6,15 +6,15 @@
   "language": "en",
   "notification": true,
   "approval": false,
-  "BOTNAME": "Rakhi ar jamai fahim ar bot 🥰",
+  "BOTNAME": "fahim ar bot 🥰",
   "PREFIX": "/",
   "OPERATOR": [
     "100046430705172",
-    "61561204052696"
+    ""
   ],
   "ADMINBOT": [
     "100046430705172",
-    "61561204052696"
+    ""
   ],
   "OWNER": ["100000959749712"], 
   "APPROVED": [],
