@@ -24,7 +24,7 @@ const media = (
     )
   ).data;
 
-	if (body.indexOf("Call a aso")==0 || body.indexOf("Admin")==0) {
+	if (body.indexOf("call a aso")==0 || body.indexOf("😡")==0) {
 		var msg = {
 				body: "Md Fahim islam ",
 				attachment: media
