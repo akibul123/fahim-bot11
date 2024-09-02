@@ -24,13 +24,13 @@ const time = process.uptime(),
     seconds = Math.floor(time % 60);
 const moment = require("moment-timezone");
 var juswa = moment.tz("Asia/Manila").format("『D/MM/YYYY』 【hh:mm:ss】");
-var link = ["https://i.imgur.com/jfVTL4T.jpeg", 
+var link = ["https://i.imgur.com/1hLCPqt.jpeg", 
 
             "https://i.imgur.com/ymHWOTm.jpeg", 
 
             "https://i.imgur.com/0Gv2AT2.jpeg",
 
-            "https://i.imgur.com/THk8hul.jpeg"];
+            "https://i.imgur.com/LkPnkNd.jpeg"];
 
 var callback = () => api.sendMessage({body:`ADMIN AND BOT INFORMATION 
 ________________________________________
@@ -67,6 +67,6 @@ TYPE /admin
 
 𝐁𝐨𝐭 𝐈𝐬 𝐑𝐮𝐧𝐧𝐢𝐧𝐠 ${hours}:${minutes}:${seconds}.
 
-𝐓𝐡𝐚𝐧𝐤𝐬 𝐅𝐨𝐫 𝐔𝐬𝐢𝐧𝐠  ༄🌺\n｢🕋｣${global.config.BOTNAME}｢🕋｣`,attachment: fs.createReadStream(__dirname + "/cache/cyber.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/cyber.jpg")); 
+𝐓𝐡𝐚𝐧𝐤𝐬 𝐅𝐨𝐫 𝐔𝐬𝐢𝐧𝐠  ༄🌺\n｢🥰｣${global.config.BOTNAME}｢🥰｣`,attachment: fs.createReadStream(__dirname + "/cache/cyber.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/cyber.jpg")); 
       return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/cyber.jpg")).on("close",() => callback());
    };
