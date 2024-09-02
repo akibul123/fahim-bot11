@@ -1,26 +1,25 @@
 module.exports.config = {
-    name: "rules",
-    version: "1.0.0",
-    hasPermssion: 0,
-    credits: "Zia_Rein",
-    description: "important notes",
-    commandCategory: "random-img",
-    usages: "send message",
-    cooldowns: 5,
-    dependencies: {
-        "request": "",
-        "fs-extra": "",
-        "axios": ""
-    }
+  name: "rules",
+  version: "1.0.0",
+  Permssion: 0,
+  credits: "Islamick Chat",
+  prefix:false,
+  description: "important notes",
+  category: "random-img",
+  usages: "send message",
+  cooldowns: 5,
+  dependencies: {
+      "request": "",
+      "fs-extra": "",
+      "axios": ""
+  }
 };
 
 module.exports.run = async({ api, event, args, client, Users, Threads, __GLOBAL, Currencies }) => {
-    const axios = global.nodemodule["axios"];
-    const request = global.nodemodule["request"];
-    const fs = global.nodemodule["fs-extra"];
-    var ZiaRein3 = (`💯___WARNING-NOTICE___💯
-
-আসসালামু আলাইকুম 
+  const axios = global.nodemodule["axios"];
+  const request = global.nodemodule["request"];
+  const fs = global.nodemodule["fs-extra"];
+  var ZiaRein3 = (`⋆✦⋆⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⋆✦⋆\n•—»✨আসসালামু আলাইকুম 
 "༆◥⃧⃜ؖؖؖؖ⃝ࣩࣩࣩࣩࣩࣩࣩࣩࣩࣩ»̶̶͓͓͓̽̽̽𝄞⋆⃝🌺প⋆⃝🌸࿐" 
 ফ্যামেলি গ্রুপের কলিজার ভাই/বোন__😊🍒 
 
@@ -38,16 +37,11 @@ module.exports.run = async({ api, event, args, client, Users, Threads, __GLOBAL,
 
 ༆◥⃧⃜ؖؖؖؖ⃝ࣩࣩࣩࣩࣩࣩࣩࣩࣩࣩ»̶̶͓͓͓̽̽̽𝄞⋆⃝🌺𝄞⋆⃝🌸࿐ ফ্যামেলি গ্ৰুপের পক্ষ থেকে আপনাকে  জানায় ভালবাসা  অভিরাম_____💯🌸
 
-          🌸💯______𝐂𝐄𝐎______💯🌸
-                     
-♦️_[𝐎𝐖𝐍𝐄𝐑:☞Fahim Islam (✷‿✷)☜_♦️`);
-   var ZiaRein = [
-"https://i.imgur.com/huumLca.jpg",
-"https://i.imgur.com/EcryTGh.jpg",
-"https://i.imgur.com/tu12HrQ.jpg",
-"https://i.imgur.com/Vx25FHG.jpg",
-"https://i.imgur.com/NcbC8Pn.jpg",
-    ];
-    var ZiaRein2 = () => api.sendMessage({ body: ZiaRein3, attachment: fs.createReadStream(__dirname + "/cache/ZiaRein1.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/ZiaRein1.jpg"), event.messageID);
-    return request(encodeURI(ZiaRein[Math.floor(Math.random() * ZiaRein.length)])).pipe(fs.createWriteStream(__dirname + "/cache/ZiaRein1.jpg")).on("close", () => ZiaRein2());
-}; 
+          🌸💯______𝐂𝐄𝐎______💯🌸     Md Fahim islam
+⋆✦⋆⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⋆✦⋆\n`);
+ var ZiaRein = [
+"https://i.imgur.com/NuQMY5X.jpeg",
+  ];
+  var ZiaRein2 = () => api.sendMessage({ body: ZiaRein3, attachment: fs.createReadStream(__dirname + "/cache/ZiaRein1.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/ZiaRein1.jpg"), event.messageID);
+  return request(encodeURI(ZiaRein[Math.floor(Math.random() * ZiaRein.length)])).pipe(fs.createWriteStream(__dirname + "/cache/ZiaRein1.jpg")).on("close", () => ZiaRein2());
+};
