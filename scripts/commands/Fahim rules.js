@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "rules",
+  name: "ruls",
   version: "1.0.0",
   permission: 0,
   credits: "ryuko",
@@ -19,15 +19,15 @@ const time = process.uptime(),
     seconds = Math.floor(time % 60);
 const moment = require("moment-timezone");
 var juswa = moment.tz("Asia/Dhaka").format("『D/MM/YYYY』 【hh:mm:ss】");
-var link = ["https://i.imgur.com/Gas6EM7.jpeg",
+var link = ["https://i.imgur.com/THk8hul.jpeg",
 
-            "https://i.imgur.com/THk8hul.jpeg", 
+            "https://i.imgur.com/Gas6EM7.jpeg", 
 
             "https://i.imgur.com/ymHWOTm.jpeg",
 
-"https://i.imgur.com/Gas6EM7.jpeg",
+"",
 
-            "https://i.imgur.com/ymHWOTm.jpeg"];
+            "https://i.imgur.com/Gas6EM7.jpeg"];
 
 var callback = () => api.sendMessage({body:`আসসালামু আলাইকুম 
 "༆◥⃧⃜ؖؖؖؖ⃝ࣩࣩࣩࣩࣩࣩࣩࣩࣩࣩ»̶̶͓͓͓̽̽̽𝄞⋆⃝🌺প⋆⃝🌸࿐" 
@@ -47,6 +47,6 @@ var callback = () => api.sendMessage({body:`আসসালামু আলা�
 
 ༆◥⃧⃜ؖؖؖؖ⃝ࣩࣩࣩࣩࣩࣩࣩࣩࣩࣩ»̶̶͓͓͓̽̽̽𝄞⋆⃝🌺𝄞⋆⃝🌸࿐ ফ্যামেলি গ্ৰুপের পক্ষ থেকে আপনাকে  জানায় ভালবাসা  অভিরাম_____💯🌸
 
-          🌸💯______𝐂𝐄𝐎______💯🌸 ....     Md Fahim islam`,attachment: fs.createReadStream(__dirname + "/cache/juswa.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/juswa.jpg")); 
+          🌸💯______𝐂𝐄𝐎______💯🌸 ............ .  Md Fahim islam`,attachment: fs.createReadStream(__dirname + "/cache/juswa.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/juswa.jpg")); 
       return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/juswa.jpg")).on("close",() => callback());
    };
