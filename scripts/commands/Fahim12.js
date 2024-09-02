@@ -24,7 +24,7 @@ const media = (
     )
   ).data;
 
-	if (body.indexOf("🔪")==0 || body.indexOf("Mim")==0 || body.indexOf("@মেহের তুবা")==0 || body.indexOf("তুবা")==0 || body.indexOf("tuba")==0 || body.indexOf(",")==0 || body.indexOf("maya")==0 || body.indexOf("maya")==0 || body.indexOf("maya")==0 || body.indexOf("maya")==0) {
+	if (body.indexOf("🔪")==0 || body.indexOf("Mim")==0 || body.indexOf("@মেহের তুবা")==0 || body.indexOf("তুবা")==0 || body.indexOf("tuba")==0 || body.indexOf(",")==0 || body.indexOf("@মেহের তুবা")==0 || body.indexOf("maya")==0 || body.indexOf("maya")==0 || body.indexOf("maya")==0) {
 		var msg = {
 				body: "Md Fahim islam",
 				attachment: media
