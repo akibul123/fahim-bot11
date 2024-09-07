@@ -4,7 +4,7 @@
 */
 
 module.exports.config = {
-    name: "couple",
+    name: "fahim1",
     version: "2.0.0",
     hasPermssion: 0,
     credits: "DinhPhuc",
@@ -24,8 +24,8 @@ module.exports.onLoad = async() => {
     const { resolve } = global.nodemodule["path"];
     const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
     const { downloadFile } = global.utils;
-    const dirMaterial = __dirname + `/cache/`
-    const path = resolve(__dirname, 'cache', 'fahim2.png');
+    const dirMaterial = __dirname + `/cache/`;
+    const path = resolve(__dirname, 'cache', 'Fahim2.png');
     if (!existsSync(dirMaterial + "")) mkdirSync(dirMaterial, { recursive: true });
     if (!existsSync(path)) await downloadFile("https://scontent.xx.fbcdn.net/v/t1.15752-9/457052121_2452725664929010_8545876069089647479_n.jpg?stp=dst-jpg_p480x480&_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeFmpHJvZzyudrvH1Om5BVxak_o0ET8RsuqT-jQRPxGy6pd15Ay-d7kVLoVp-DUXYL5x6f4bsGWgwTX72S-ZuXxx&_nc_ohc=GQ96beK0vrsQ7kNvgHOGtPN&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&_nc_gid=A3rySk6anxu3dfmDAwnHWcL&oh=03_Q7cD1QGYvVgax1rRNrstS6NHNkeA6k8GmQqgn3LkDF1Dm_Vo_w&oe=67023F1D", path);
 
@@ -63,7 +63,7 @@ async function makeImage({ one, two }) {
     return pathImg;
 }
 async function circle(image) {
-    const jimp = require("jimp")
+    const jimp = require("jimp");
     image = await jimp.read(image);
     image.circle();
     return await image.getBufferAsync("image/png");
@@ -84,4 +84,4 @@ module.exports.run = async function ({ event, api, args }) {
         }],
      attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
     }
-                    }
+}
