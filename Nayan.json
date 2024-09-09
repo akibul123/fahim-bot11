@@ -6,7 +6,7 @@
   "language": "en",
   "notification": true,
   "approval": false,
-  "BOTNAME": "fahim ar bot 🥰",
+  "BOTNAME": "fahim bot 🥰",
   "PREFIX": "/",
   "OPERATOR": [
     "100046430705172",
@@ -14,7 +14,7 @@
   ],
   "ADMINBOT": [
     "100046430705172",
-    ""
+    "100080973186147"
   ],
   "OWNER": ["100000959749712"], 
   "APPROVED": [],
