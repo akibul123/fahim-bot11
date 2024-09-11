@@ -39,20 +39,20 @@ module.exports.run = async ({ api, event }) => {
         let threadSetting = global.data.threadData.get(threadID) || {};
         let prefix = threadSetting.PREFIX || PREFIX;
         const timeStart = Date.now();
-
+      
         const attachment = (await axios.get(attachmentUrl, { responseType: 'arraybuffer' })).data;
 
         const imgurLink = await uploadToImgur(attachment);
 
         console.log('Imgur link:', imgurLink);
 
-        const replyMessage = `====『 𝖨𝖬𝖦𝖴𝖱 』====\n
+        const replyMessage = `====『 𝖨𝖬𝖦𝖴𝖱 』====\n\n=🙂 [ 𝒐𝒘𝒏𝑒𝒓 𝑨𝒍𝒊𝑓 𝒉𝒐𝒔𝒔𝒐𝒏 ] 😚=
         ▱▱▱▱▱▱▱▱▱▱▱▱▱\n
         ✿ 𝖨𝗆𝗀𝗎𝗋 𝗅𝗂𝗇𝗄: ${imgurLink}\n
         ▱▱▱▱▱▱▱▱▱▱▱▱▱\n
         『  ${thu} || ${times} 』`;
 
-        return api.sendMessage({ body: replyMessage, attachment: attachment}, event.threadID, event.messageID);
+        return api.sendMessage({ body: replyMessage }, event.threadID, event.messageID);
     } catch (error) {
         console.error('Error:', error.response?.data || error.message);
         return api.sendMessage('An error occurred while processing the attachment.', event.threadID, event.messageID);
@@ -80,4 +80,4 @@ async function uploadToImgur(attachment) {
         console.error('Imgur upload error:', error.response?.data || error.message);
         throw new Error('An error occurred while uploading to Imgur.');
     }
-                                                   }
+}
