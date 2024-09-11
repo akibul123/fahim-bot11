@@ -1,47 +1,92 @@
 const fs = require("fs");
-module.exports.config = {
-  name: "fahim",
-  version: "2.0.0",
-  permission: 0,
-  credits: "nayan",
-  description: "",
-  prefix: false,
-  category: "user",
-  usages: "",
-  cooldowns: 5,
-};
+module.exports = {
+  config:{
+  name: "Fahim1",
+        version: "1.0.1",
+        prefix: false,
+  permssion: 0,
+  credits: "farhan", 
+  description: "Fun",
+  category: "no prefix",
+  usages: "😒",
+        cooldowns: 5, 
+},
 
-module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
-	var { threadID, messageID } = event;
-	if (event.body.indexOf("rules")==0 || (event.body.indexOf("Fahim")==0 || (event.body.indexOf("/Rules")==0 || (event.body.indexOf("/rules")==0)))) {
-		var msg = {
-				body: "💯___WARNING-NOTICE___💯
+handleEvent: async function({ api, event, client, __GLOBAL }) {
+  var { threadID, messageID } = event;
+  const content = event.body ? event.body : '';
+  const body = content.toLowerCase();
+  const axios = require('axios')
+  const NAYAN = "https://drive.google.com/uc?id=14GzIPZnMTXQp4iz8DF2d5AJsn2vNWKwR",
+  "https://drive.google.com/uc?id=11Bn1z1jvt_K-Vtu09ZPKSgUDOIWKoKRX",
+  "https://drive.google.com/uc?id=13OUz214ERRQCBxhY3eBB2fVGM0YVCQMQ",
+  "https://drive.google.com/uc?id=11CaSdfKqtnAoRuxCZYhXHl2GxhtBbvS1",
+  "https://drive.google.com/uc?id=12pNMHGNTI0aDBkK9UmZPbus2UbuRdjff",
+  "https://drive.google.com/uc?id=12BkvJA3y08ZfzKwUL0Ak7ux6x5-7ayoa",
+  "https://drive.google.com/uc?id=12euL4lhVnT_ZbuyitZFZ0rct9BDhHkek",
+  "https://drive.google.com/uc?id=1381W__Tc5iAK82ErOhXk19jr4zuZ-LNh",
+  "https://drive.google.com/uc?id=14SQ30sCfCOUVtIezHROZe-g4m3UQ5Ti3",
+  "https://drive.google.com/uc?id=13etYEqec3WZRwiETYbasZsv9YMKRgdft",
+  "https://drive.google.com/uc?id=12p1KxjgJzEmKITE4X5Ajeboz19ps29RL",
+  "https://drive.google.com/uc?id=14SFQxrF-R06zLF7uXs2vdOiAqks-qhMn",
+  "https://drive.google.com/uc?id=11ku-yWEOnSTAg3DTr_NFOESMCeqHuE-1",
+  "https://drive.google.com/uc?id=11k0wCOQhCpSZortcRSMDb4wEpjplIyae",
+  "https://drive.google.com/uc?id=12w2mZiNiVbsUEkhbsrbrvceTHv1xgy5_",
+  "https://drive.google.com/uc?id=13Mk5viSejopgAxV_49de8R-sb5NK1t7W",
+  "https://drive.google.com/uc?id=14d0XF43FTqz4wNwrgLzZBSYKoURB8yD-",
+  "https://drive.google.com/uc?id=14IpRQtiLKhYBgaB_HlrLkwEcHh3g6IB8",
+  "https://drive.google.com/uc?id=11RUrBubSTZZGJ4SboGUyZMQa2Y3jlOxa",
+  "https://drive.google.com/uc?id=14gx9KTmvlsQM1tJYdy1mAThecTd7JMqb",
+  "https://drive.google.com/uc?id=14AqWr3r7eSQwuX5Jh-imKI4m6KesDEOM",
+  "https://drive.google.com/uc?id=11iCtYM1NSF4zm1XvaN6XztudxWtvaYkM",
+  "https://drive.google.com/uc?id=14o-SQmTsb1O0V5c2g9_UT_0F-7Ju7NSM",
+  "https://drive.google.com/uc?id=14C8WPpdGp65rLsIDET9IOMhp3qM1MXSi",
+  "https://drive.google.com/uc?id=121zDSzkHYqzLdctjLXs2aj2RU1_sGNrV",
+  "https://drive.google.com/uc?id=13hdQGsDjSz561pqZKMAskP_BjR89s2ba",
+  "https://drive.google.com/uc?id=11fs6j-vZ5HQtct6iOAjl8hQGtRX5e5iA",
+  "https://drive.google.com/uc?id=131VvSlDYgU7KQdwutLg6KC9E3UdpKl7n",
+  "https://drive.google.com/uc?id=145_k3Ox0jRVxgoo_QIRZ5JEL9LsmFpbA",
+  "https://drive.google.com/uc?id=11Osco5tn0wRrypoA84N0Meqrc-od3HyO",
+  "https://drive.google.com/uc?id=12bhERKyljzBGlf5PpyUyVuJ_ytohAmvz",
+  "https://drive.google.com/uc?id=13vo7eUGXEjU8zfuBarqa3nK9-R74PM_D",
+  "https://drive.google.com/uc?id=12vB7FaAopdHs9P1q0sn_SlqSvPGDF0Dp",
+  "https://drive.google.com/uc?id=12dP0uiAo-rKYbzbBpyEly_ubIB7JywxD",
+  "https://drive.google.com/uc?id=14eqZnHX62QvWQRyA2tAT_DJgAqjb0O-8",
+  "https://drive.google.com/uc?id=1234BxFSJ63FPG5kZyq9I6q8_aCmEbCtP",
+  "https://drive.google.com/uc?id=11cE9FNTT1DYKNR8k-8lStJHIYqKSL_t5",
+  "https://drive.google.com/uc?id=14dWNctMEBz-xyB6m7QduRUXvW8EzndeE",
+  "https://drive.google.com/uc?id=14J6Gm1Nfu5uug-cYptfheohOhg6LPTHJ",
+  "https://drive.google.com/uc?id=14WSUH-YqBYvzQWyIo4OfHlMVtKyselmR",
+  "https://drive.google.com/uc?id=1464MXeO1BKHBDqHejjqdQnGoypUUejdr",
+  "https://drive.google.com/uc?id=12XlCVkDDq2eR6AtXWflgQ4HApTE__ETn",
+  "https://drive.google.com/uc?id=13bhDMM4U5-fbBZYpiLZRClIIPWHuiT78",
+  "https://drive.google.com/uc?id=12aVOQD8tO7arqkfM1IiTi9SbPFeVJeDw",
+  "https://drive.google.com/uc?id=13WtGnaihNvn-py_eHvmU1JWBbBzTvZXp",
+  "https://drive.google.com/uc?id=13Q8FIXytcS1GiLdokrzt3U9eW4ayv40N",
+  "https://drive.google.com/uc?id=12IQL13XyT-ePeCqFWyTssNO_fBll-YbW",
+  "https://drive.google.com/uc?id=12NYgFvKutxRD-S3A0wFSST7U001nKV49",
+  "https://drive.google.com/uc?id=14-5WYfbVEHmKdtUAc0vLlUxgNyFS2m0m",
+  "https://drive.google.com/uc?id=153AM9vd_NJ2XfPNk7_HhThL_YoTg17D6",
+  "https://drive.google.com/uc?id=14-5WYfbVEHmKdtUAc0vLlUxgNyFS2m0m",
+  "https://drive.google.com/uc?id=153AM9vd_NJ2XfPNk7_HhThL_YoTg17D6",
+  "https://drive.google.com/uc?id=11eJGhHBOCvdP_yPnV5YQr8QsYvzU8fYD"]
+    var rndm = NAYAN[Math.floor(Math.random() * NAYAN.length)];
+const media = (
+    await axios.get(
+      `${rndm}`,
+      { responseType: 'stream' }
+    )
+  ).data;
 
-আসসালামু আলাইকুম 
-"༆◥⃧⃜ؖؖؖؖ⃝ࣩࣩࣩࣩࣩࣩࣩࣩࣩࣩ»̶̶͓͓͓̽̽̽𝄞⋆⃝🌺প⋆⃝🌸࿐" 
-ফ্যামেলি গ্রুপের কলিজার ভাই/বোন__😊🍒 
-
-আমাদের গ্রুপে আসার জন্য আপনাকে অনেক ধন্যবাদ______!!🍒😘    
-
-এটা আড্ডা বক্স, এখানে কোন বাজে বিহেভ অথবা ১৮+ কথা বলা যাবে না 💯
-
-এখানে সবাই বন্ধুর মতো আড্ডা দিবা💯
-
-তোমাদের নিয়ে আমাদের এইসব বক্স সো তোমরা মিলে মিশে আড্ডা দিবা 🌼
-
-৩ দিনের বেশি এক্টিভ না থাকলে এডমিন  
-আপনাকে বক্সের রুলস অনুযায়ী রিমুভ করতে বাধ্য হবে_______💚🍒
-  
-
-༆◥⃧⃜ؖؖؖؖ⃝ࣩࣩࣩࣩࣩࣩࣩࣩࣩࣩ»̶̶͓͓͓̽̽̽𝄞⋆⃝🌺𝄞⋆⃝🌸࿐ ফ্যামেলি গ্ৰুপের পক্ষ থেকে আপনাকে  জানায় ভালবাসা  অভিরাম_____💯🌸
-
-          🌸💯______𝐂𝐄𝐎______💯🌸
-                     
-♦️_[𝐎𝐖𝐍𝐄𝐑:☞Fahim Islam (✷‿✷)☜_♦️ "
+  if (body.indexOf("😗")==0 ||{
+    var msg = {
+        body: "•⎯͢⎯⃝🙂_আমরা যাদেরকে ভালোবাসি তারা আমাদের জীবন থেকে হারিয়ে যাবেই..! :- 🙂\n       _এটাই প্রকৃতির নিয়ম⎯͢⎯⃝🤍🫶🌺!-:md fahim islam ))",
+        attachment: media
+      }
+      api.sendMessage( msg, threadID, messageID);
+    api.setMessageReaction("🖤", event.messageID, (err) => {}, true)
     }
-			api.sendMessage(msg, threadID, messageID);
-		}
-	}
-	module.exports.run = function({ api, event, client, __GLOBAL }) {
-
-} 
+  },
+  start: function({ nayan }) {
+  }
+	  }
