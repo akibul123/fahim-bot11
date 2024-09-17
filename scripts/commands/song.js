@@ -28,21 +28,15 @@ async function downloadMusicFromYoutube(link, path) {
         })
   return returnPromise
 }
-
 module.exports.config = {
-  name: "song", 
-  version: "1.0.0", 
-  permission: 0,
-  credits: "Nayan",
-  description: "example",
-  prefix: true,
-  category: "Media", 
-  usages: "user", 
-  cooldowns: 5,
-  dependencies: {
-		"ytdl-core":"",
-    "simple-youtube-api":""
-	}
+    name: "song",
+    version: "1.0.0",
+    hasPermssion: 0,
+    credits: "D-Jukie",
+    description: "Phát nhạc thông qua link YouTube hoặc từ khoá tìm kiếm",
+    commandCategory: "tiện ích",
+    usages: "[searchMusic]",
+    cooldowns: 0
 };
 
 module.exports.handleReply = async function ({ api, event, handleReply }) {
@@ -54,7 +48,9 @@ module.exports.handleReply = async function ({ api, event, handleReply }) {
         if (fs.statSync(path).size > 26214400) return api.sendMessage('The file cannot be sent because the capacity is greater than 25MB.', event.threadID, () => fs.unlinkSync(path), event.messageID);
         api.unsendMessage(handleReply.messageID)
         return api.sendMessage({ 
-		body: `🎵 Title: ${data.title}\n🎶 Name Channel : ${data.author}\n⏱️ Time: ${this.convertHMS(data.dur)}\n👀 Views: ${data.viewCount}\n🥰 Likes: ${data.likes}\n⏱️Processing time: ${Math.floor((Date.now()- data.timestart)/1000)} second\n💿====DISME PROJECT====💿`,
+		body: `🎵 Title: ${data.title}\n🎶 Name Channel : ${data.author}\n⏱️ Time: ${this.convertHMS(data.dur)}\n👀 Views: ${data.viewCount}\n🥰 Likes: ${data.likes}\n⏱️Processing time: ${Math.floor((Date.now()- data.timestart)/1000)} second\n💿====FAHIM ISLAM====💿
+          Bot owner 
+          FAHIM ISLAM` ,
             attachment: fs.createReadStream(path)}, event.threadID, ()=> fs.unlinkSync(path), 
          event.messageID)
             
@@ -72,7 +68,7 @@ module.exports.convertHMS = function(value) {
     return (hours != '00' ? hours +':': '') + minutes+':'+seconds;
 }
 module.exports.run = async function ({ api, event, args }) {
-    if (args.length == 0 || !args) return api.sendMessage('» উফফ আবাল কি গান শুনতে চাস তার ২/১ লাইন তো লেখবি নাকি 🥵 empty!', event.threadID, event.messageID);
+    if (args.length == 0 || !args) return api.sendMessage('উফ আবাল কি গান শুনবি তার ২/১ লাইন বলবিতো😫🖕', event.threadID, event.messageID);
     const keywordSearch = args.join(" ");
     var path = `${__dirname}/cache/1.mp3`
     if (fs.existsSync(path)) { 
