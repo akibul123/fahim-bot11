@@ -14,7 +14,7 @@ config: {
   languages: {
   "vi": {},
       "en": {
-          "missing": `[ ! ] Input Name.\nEx: ${global.config.PREFIX}rndm nayan`
+          "missing": `[ ! ] Input Name.\nEx: ${global.config.PREFIX}rndm fahim`
       }
   },
 
