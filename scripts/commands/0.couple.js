@@ -19,12 +19,12 @@ handleEvent: async function({ api, event, client, __GLOBAL }) {
   const axios = require('axios')
 const media = (
     await axios.get(
-      'https://i.imgur.com/2rfTHsp.mp4',
+      'https://i.imgur.com/tyBwYzg.mp4',
       { responseType: 'stream' }
     )
   ).data;
 
-	if (body.indexOf("Fahim")==0 || body.indexOf("ফাহিম")==0) {
+	if (body.indexOf("😿")==0 || body.indexOf("😹")==0) {
 		var msg = {
 				body: "Md Fahim islam ",
 				attachment: media
